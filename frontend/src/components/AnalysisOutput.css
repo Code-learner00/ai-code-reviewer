@@ -1,0 +1,104 @@
+
+.analysis-output-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Take full height of parent section */
+  overflow-y: auto; /* Enable scrolling for long content */
+  padding-right: 10px; /* Provide space for scrollbar */
+}
+
+.analysis-output-container h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--header-text-light);
+  font-size: 1.8rem;
+  border-bottom: 1px solid var(--border-color-light);
+  padding-bottom: 10px;
+}
+
+.analysis-section {
+  background-color: var(--section-bg-light);
+  border: 1px solid var(--section-border-light);
+  border-radius: 10px; /* Slightly more rounded than containers */
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px var(--box-shadow-light);
+}
+
+.analysis-section h3 {
+  margin-top: 0;
+  color: var(--button-bg-light); /* Highlight section headers */
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed var(--section-border-light);
+  padding-bottom: 5px;
+}
+
+.analysis-section p, .analysis-section li {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: var(--text-color-light);
+}
+
+.analysis-section ul {
+  list-style-type: disc;
+  margin-left: 25px;
+  padding: 0;
+}
+
+.analysis-section ul li {
+  margin-bottom: 8px;
+}
+
+/* Specific styling for bugs/suggestions */
+.analysis-section.bugs h3 {
+  color: var(--error-text-light); /* Red for bugs */
+}
+
+.analysis-section.suggestions h3 {
+  color: #28a745; /* Green for suggestions */
+}
+
+.analysis-section.tests-docs h3 {
+  color: #ffc107; /* Orange/Yellow for tests/docs */
+}
+
+.analysis-section pre {
+  background-color: var(--input-bg-light);
+  border: 1px solid var(--input-border-light);
+  border-radius: 8px;
+  padding: 15px;
+  overflow-x: auto; /* Enable horizontal scrolling for code blocks */
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--text-color-light);
+}
+
+.no-results-message {
+  text-align: center;
+  padding: 30px;
+  color: var(--placeholder-text-light);
+  font-style: italic;
+  font-size: 1rem;
+  background-color: var(--section-bg-light);
+  border-radius: 10px;
+  border: 1px dashed var(--section-border-light);
+  margin-top: 20px;
+}
+
+/* Responsive adjustments for AnalysisOutput */
+@media (max-width: 768px) {
+  .analysis-output-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .analysis-section {
+    padding: 15px;
+  }
+
+  .analysis-section h3 {
+    font-size: 1.2rem;
+  }
+}
